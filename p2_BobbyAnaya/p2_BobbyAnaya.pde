@@ -331,12 +331,16 @@ void draw(){
   text("8",1200,392);
   text("MPH",speedX, speedY+50);
   text("x1000 rpm",tachX, tachY+50);
-  text(direction,centX+((centSep3X-centX)/2),centSep2Y+((480-centSep2Y)/2));
-  text(temperature,centSep3X+((centSep4X-centSep3X)/2),centSep2Y+((480-centSep2Y)/2));
-  text(transmission,centSep4X+((900-centSep4X)/2),centSep2Y+((480-centSep2Y)/2));
-  text(odometer,centSep3X+((centSep4X-centSep3X)/2),centY+((centSep1Y-centY)/2));
-  textSize(100);
-  text(speedString,centX+100,centSep1Y+((centSep2Y-centSep1Y)/2)-30);
+  if(carOn){
+    text(direction,centX+((centSep3X-centX)/2),centSep2Y+((480-centSep2Y)/2));
+    text(temperature,centSep3X+((centSep4X-centSep3X)/2),centSep2Y+((480-centSep2Y)/2));
+    text(transmission,centSep4X+((900-centSep4X)/2),centSep2Y+((480-centSep2Y)/2));
+    text(odometer,centSep3X+((centSep4X-centSep3X)/2),centY+((centSep1Y-centY)/2));
+    textSize(20);
+    text("Mileage: 600 miles",mileageX + mileageXSize/2,mileageY + mileageYSize/2);
+    textSize(100);
+    text(speedString,centX+100,centSep1Y+((centSep2Y-centSep1Y)/2)-30);
+  }
   textSize(15);
   text("C",465,445);
   text("H",559,445);
